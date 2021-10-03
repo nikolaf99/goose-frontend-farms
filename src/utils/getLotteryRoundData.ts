@@ -27,7 +27,8 @@ const getLotteryRoundData = async (lotteryNumber: number): Promise<DataResponse>
 
     return data
   } catch (error) {
-    throw new Error(error)
+    console.error('Unable to fetch data:', error)
+    throw new Error('Error')
   }
 }
 
